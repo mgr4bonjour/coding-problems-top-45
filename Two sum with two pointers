@@ -1,0 +1,73 @@
+Problem: Given a sorted array of integers and a target sum, return the indices of the two numbers that add up to the target.
+Solution 
+def find_two_numbers(nums, target):
+    left = 0
+    right = len(nums) - 1
+
+    while left < right:
+        total = nums[left] + nums[right]
+
+        if total == target:
+            return [left, right]
+        elif total < target:
+            left += 1
+        else:
+            right -= 1
+
+    return None
+
+print(find_two_numbers([1,4,2,7],6))
+
+def find_two_numbers(nums, target):
+def: Defines a new function.
+
+find_two_numbers: The name of the function.
+
+nums: A list of numbers.
+
+target: The number we're trying to reach by adding two numbers from the list.
+
+left = 0
+Starts the left pointer at the beginning of the list (index 0).
+
+right = len(nums) - 1
+Starts the right pointer at the end of the list.
+
+while left < right:
+Repeat the loop as long as left index is before right.
+
+ total = nums[left] + nums[right]
+Adds the two numbers at the left and right positions.
+
+ if total == target:
+If the sum is exactly equal to the target:
+return [left, right]: Return the indices.
+
+elif total < target:
+If the sum is less than the target:
+left += 1: Move left pointer one step to the right (try a bigger number).
+
+ else:
+If the sum is more than the target:
+right -= 1: Move right pointer one step to the left (try a smaller number).
+
+return None
+If the loop ends and no pair adds up to the target, return None.
+
+❗Important Note:
+This approach assumes the input list nums is sorted in increasing order.
+But [1, 4, 2, 7] is not sorted.
+
+✅ To fix it, sort the list first:
+
+print(find_two_numbers(sorted([1, 4, 2, 7]), 6))
+This becomes:
+print(find_two_numbers([1, 2, 4, 7], 6))
+Now:
+nums[0] + nums[2] = 1 + 4 = 5 (too small)
+move left to index 1 → 2 + 4 = 6 ✅
+So it returns:
+
+[1, 2]
+✅ Final Output:
+[1, 2]
