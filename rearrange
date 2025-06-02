@@ -1,1 +1,31 @@
+## Problem: Given two strings, determine if one is a rearrangement (anagram) of the other.
 
+def is_rearrangement(str1 , str2):
+return sorted(str1) == sorted(str2)
+print (is_rearrangement('hello','ollhe'))
+
+** Explanation 
+def is_rearrangement(str1, str2):
+
+is_rearrangement: This is the name of the function. You can name it anything, but this name is chosen because it checks if one string is a rearrangement (anagram) of another.
+(str1, str2): These are parameters — placeholders for the two input strings you will give the function when you call it.
+✅ This line defines a function named is_rearrangement that accepts two strings.
+
+    return sorted(str1) == sorted(str2)
+
+return: This tells Python to give back the result to whoever called the function.
+sorted(str1): This turns the first string into a list of sorted characters.
+For example, "hello" becomes ['e', 'h', 'l', 'l', 'o']
+sorted(str2): Same as above, but for the second string.
+==: This compares the two sorted lists to see if they are the same.
+✅ This line checks if both strings have the exact same letters (just in any order). If yes, it returns True. Otherwise, False.
+
+print(is_rearrangement('hello', 'ollhe'))
+
+print(...): This prints the result to the screen.
+is_rearrangement(...): This calls the function you defined above.
+'hello': First input string.
+'ollhe': Second input string (just jumbled up).
+✅ This line calls the function with two strings and prints the result. Since both contain the same letters, the output will be:
+
+True
