@@ -1,0 +1,64 @@
+Problem: Print numbers from 1 to N. For multiples of 3 print "Fizz", for multiples of 5 print "Buzz", and for both, print "FizzBuzz".
+solution:
+def fizz_buzz(n):
+    for i in range(1, n + 1):
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+
+fizz_buzz(15)
+
+✅ What does this program do?
+It prints numbers from 1 to n (in this case 15), but:
+For numbers divisible by 3, it prints "Fizz"
+For numbers divisible by 5, it prints "Buzz"
+For numbers divisible by both 3 and 5, it prints "FizzBuzz"
+Otherwise, it prints the number itself
+
+Line-by-line Explanation:
+1. def fizz_buzz(n):
+This defines a function named fizz_buzz that takes one input n.
+
+2. for i in range(1, n + 1):
+Loops from 1 to n (inclusive). So if n = 15, it goes from 1 to 15.
+
+3. if i % 3 == 0 and i % 5 == 0:
+% means modulus (remainder).
+
+This checks if the number is divisible by both 3 and 5 (e.g., 15).
+
+If true, print "FizzBuzz".
+
+4. elif i % 3 == 0:
+If divisible by 3 (but not 5), print "Fizz".
+
+5. elif i % 5 == 0:
+If divisible by 5 (but not 3), print "Buzz".
+
+6. else:
+If not divisible by 3 or 5, just print the number.
+
+7. fizz_buzz(15)
+Calls the function with n = 15.
+
+✅ Output:
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
