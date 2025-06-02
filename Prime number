@@ -1,0 +1,51 @@
+Problem: Write a function that checks if a number is prime.
+solution:
+
+def is_prime(n):
+if n <= 1 :
+return False
+for i in range(2,n):
+if n%i==0:
+return False
+return True
+print(is_prime(6))
+
+Explanation-
+def is_prime(n):
+
+def: This defines a function in Python.
+is_prime: This is the name of the function — it tells us this function checks if a number is prime.
+(n): This is the input parameter — it’s the number we want to check.
+✅ So this line means: Define a function named is_prime that takes one number n.
+
+    if n <= 1:
+if: This is a conditional statement — it checks something.
+n <= 1: Checks if n is less than or equal to 1.
+Any number less than or equal to 1 is not prime.
+✅ If the number is 0 or 1 or less, we go inside and return False.
+
+        return False
+This means: If n is less than or equal to 1, then it’s not a prime number, so stop and return False.
+
+    for i in range(2, n):
+for i in range(2, n): This creates a loop that goes from 2 to n-1.
+We check if n can be divided evenly by any number between 2 and n-1.
+✅ If it can, it means n is not prime.
+
+        if n % i == 0:
+n % i: This means the remainder when n is divided by i.
+== 0: If remainder is zero, it means n is divisible by i (not prime).
+✅ If n is divisible by any number other than 1 and itself, return False.
+
+            return False
+If we found a number that divides n, it's not prime — so stop and return False.
+
+    return True
+If the loop finishes and no number could divide n, then it's a prime number, so return True.
+
+print(is_prime(6))
+This calls the function is_prime(6)
+6 is not a prime (it’s divisible by 2 and 3)
+
+Final Output:
+False
