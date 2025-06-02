@@ -1,0 +1,42 @@
+Problem: Given two strings, determine if one is a rearrangement (anagram) of the other.
+solution:
+
+def sum_of_digits(n):
+return sum(int(digit) for digit in str(abs(n)))
+print(sum_of_digits(1233))
+
+Explanation:
+
+def sum_of_digits(n):
+def: This is Python's way to define a function.
+sum_of_digits: The name of the function. It tells us what the function will do — sum the digits of a number.
+(n): This means the function takes one input called n (a number).
+✅ So this line says: “I'm creating a function that takes a number n and will return the sum of its digits.”
+
+    return sum(int(digit) for digit in str(abs(n)))
+abs(n)
+abs() is a function that gives the absolute value of n.
+Example: if n = -123, abs(n) becomes 123.
+✅ This makes sure the number is positive, even if you give a negative number.
+
+str(abs(n))
+Converts the number into a string, so you can go through each digit.
+Example: 123 becomes '123'.\
+
+for digit in str(abs(n))
+A loop that goes through each character (digit) in the string.\
+Example: '1233' → '1', '2', '3', '3'
+
+int(digit)
+Turns each character back into an integer (so we can do math).
+
+sum(...)
+Adds up all the numbers from the loop.
+✅ This line adds up all digits of n, even if n is negative.
+
+print(sum_of_digits(1233))
+This calls the function and prints the result.
+1233 → digits are 1 + 2 + 3 + 3 = 9
+
+Final Output:
+9
