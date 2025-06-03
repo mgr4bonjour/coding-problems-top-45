@@ -1,0 +1,26 @@
+problem : write a program to reverse a number.
+solution :
+
+def reverse_string(s):
+    return s[::-1]
+print(reverse(2,4,3,7,4))
+
+Explanation: 
+def: This is a Python keyword used to define a function.
+
+reverse_string: This is the name of the function. It tells us what the function is supposed to do—reverse a string.
+(s): This is the parameter list. Here, the function accepts one argument, which will be referred to as s inside the function.
+:: This indicates the start of the function body.
+
+return s[::-1]
+return: This keyword sends back a value from the function to wherever it was called.
+s: This is the parameter passed to the function. It is expected to be a string.
+[::-1]: This is a slicing operation in Python that reverses the string.
+Syntax: [start:stop:step]
+Here:
+start and stop are omitted (default to the whole string),
+step = -1, which means go backwards by 1 character at a time (i.e., reverse).
+
+print(reverse(2,4,3,7,4))
+print(...): This prints the result of whatever is inside the parentheses.
+reverse(2,4,3,7,4): This tries to call a function named reverse, passing in 5 arguments: 2, 4, 3, 7, 4.
