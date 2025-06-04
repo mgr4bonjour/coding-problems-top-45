@@ -1,0 +1,26 @@
+problem : write a program to find the longest word in an sentence.
+
+solution:
+def longest_word(sentence):
+    words = sentence.split()
+    return max(words, key=len)
+print(longest_word('I wrote this code in python programming language'))
+
+explanation:
+
+ def longest_word(sentence):
+
+def: Defines a function.
+longest_word: Name of the function.
+sentence: A parameter — the input sentence.
+
+words = sentence.split()
+sentence.split() splits the sentence into a list of words.
+For example: "I love programming" → ["I", "love", "programming"]
+
+ return max(words, key=len)
+max() finds the word with the maximum length.
+key=len tells Python to compare items by their length.
+
+print(longest_word("I wrote this code in python programming language"))
+gives the output 'programming'
