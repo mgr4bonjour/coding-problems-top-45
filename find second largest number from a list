@@ -1,0 +1,27 @@
+problem : write a program to find the second largest number from the list.
+
+solution:
+def second_largest(lst):
+    unique_lst = list(set(lst))
+    unique_lst.sort()
+    return unique_lst[-2] if len(unique_lst) >= 2 else None
+print(second_largest([22,5,1,7,5,44,78,3]))
+
+def second_largest(lst):
+This defines a function called second_largest.
+It takes one input: lst (a list of numbers).
+
+    unique_lst = list(set(lst))
+set(lst) removes duplicate values.
+list(...) converts it back into a normal list.
+
+    unique_lst.sort()
+This sorts the list in ascending order (small to big).
+
+    return unique_lst[-2] if len(unique_lst) >= 2 else None
+unique_lst[-2] means the second last item, which is the second largest in a sorted list.
+if len(unique_lst) >= 2 checks that there are at least two numbers.
+else None returns None if not enough values.
+
+print(second_largest([22,5,1,7,5,44,78,3]))
+OUTPUT: 44
