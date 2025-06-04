@@ -1,0 +1,26 @@
+problem: write a program of simple adding of a number.
+solution :
+def simple_adding(n):
+    return sum(range(1, n + 1))
+
+print(simple_adding(22))  # Output: 253
+
+explanation:
+def simple_adding(n): 
+def means define a function 
+simple_adding is a name of function
+(N) means the functions take one input
+
+    return sum(range(1, n + 1))
+range(1, n + 1) creates numbers from 1 to n.
+Example: If n = 5, this gives: 1, 2, 3, 4, 5
+sum(...) adds all those numbers together.
+sum(1, 2, 3, 4, 5) → 15
+return means the function sends back the answer.
+
+print(simple_adding(22))
+This line calls (runs) the function with n = 22.
+It then prints the result of the function to the screen.
+
+output :
+253
