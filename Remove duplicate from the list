@@ -1,0 +1,29 @@
+Problem : write a program to remove the duplicates from a list.
+
+solution:
+def remove_duplicates(lst):
+    return list(set(lst))
+print(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))
+
+explanation:
+def remove_duplicates(lst):
+def means: define a function.
+remove_duplicates is the name of the function.
+lst is the input — it stands for list.                    
+
+    return list(set(lst))
+set(lst) removes duplicate values from the list.
+Example: set([1, 2, 2, 3]) → {1, 2, 3}
+A set only keeps unique items.
+What is a set in Python?                                                                 *** if we want the output in the form of list then we have to use return list(set(list))
+🔸 A set is a built-in data type that:                                                      but if we have to remove only duplicate and return output in set the we use return set(list)
+Stores multiple items like a list.                                                                      
+Does NOT allow duplicates.
+Is unordered — the items don’t have a fixed position.
+
+list(...) converts the set back into a list.
+So you can use it like a normal list again.
+
+print(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))
+Output:
+[1, 2, 3, 4, 5]
